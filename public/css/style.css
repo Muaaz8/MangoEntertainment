@@ -1,0 +1,205 @@
+/* login css start */
+.mango-login-sec{
+    margin-top: 7rem;
+}
+.l-heading{
+    font-weight: 700;
+}
+.login-button{
+    background-color: #F9C034;
+    border: none;
+    width: 100%;
+    padding: 8px 8px;
+    border-radius: 20px;
+    margin: 24px 0px;
+    height: 48px;
+    font-weight: 600;
+}
+.forget-pass{
+    text-align: right;
+}
+.forget-pass a{
+    text-decoration: none;
+    color: #000000;
+}
+.login-form .input-group input{
+    background: #E5E5E5;
+    border-radius: 20px;
+    border: none;
+}
+.login-form .input-group{
+    height: 48px;
+}
+.login-form .input-group span{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+.login-form .input-group input:focus{
+    border: none;
+    box-shadow: none;
+
+}
+.text-div{
+    text-align: center;
+}
+.text-div span a{
+ color: #000000;
+ font-weight: 800;
+}
+.social-icon ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.social-icon ul li{
+    padding-right: 10px;
+}
+.social-icon ul li img{
+    width: 70px;
+}
+/* login css End */
+
+/*Signup css start */
+.mango-signup-sec{
+    margin-top: 5rem;
+}
+.signup-form .input-group input{
+    background: #E5E5E5;
+    border-radius: 20px;
+    border: none;
+}
+.signup-form .input-group{
+    height: 48px;
+}
+.signup-form .input-group span{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+.signup-form .input-group input:focus{
+    border: none;
+    box-shadow: none;
+
+}
+/*Signup css start  */
+
+/* Forget-password css start */
+.mango-forget-sec {
+    width: 70%;
+    margin: 8rem auto;
+}
+.email-form {
+    width: 80%;
+}
+.email-form .login-button{
+    height: 48px;
+}
+.email-form .input-group{
+    height: 48px;
+}
+.email-form .input-group input{
+    background: #E5E5E5;
+    border-radius: 20px;
+    border: none;
+}
+.email-form .input-group span{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+.email-form .input-group input:focus{
+    border: none;
+    box-shadow: none;
+}
+.reset-text span{
+   color: #FF4B26;
+}
+/* Forget-password css end */
+
+/* ---------- */
+
+/* verify-code css start */
+.mango-verify-sec {
+    width: 70%;
+    margin: 8rem auto;
+}
+.verify-form {
+    width: 80%;
+}
+.verify-form .login-button{
+    height: 48px;
+}
+.verify-form .input-group{
+    height: 48px;
+}
+.verify-form .input-group input{
+    background: #E5E5E5;
+    border-radius: 20px;
+    border: none;
+}
+.verify-form .input-group span{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+.verify-form .input-group input:focus{
+    border: none;
+    box-shadow: none;
+}
+/*  verify-code css end */
+
+/* ---------- */
+
+/* reset-password css start */
+.mango-reset-sec {
+    width: 70%;
+    margin: 8rem auto;
+}
+.reset-pass-form {
+    width: 80%;
+}
+.reset-pass-form .login-button{
+    height: 48px;
+}
+.reset-pass-form .input-group{
+    height: 48px;
+}
+.reset-pass-form .input-group input{
+    background: #E5E5E5;
+    border-radius: 20px;
+    border: none;
+}
+.reset-pass-form .input-group span{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+.reset-pass-form .input-group input:focus{
+    border: none;
+    box-shadow: none;
+}
+/*  reset-password css end */
+
+
+
+
+
+
+
+
+
+
+/* slider css start */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: auto;
+  }
+/* slider css End */
