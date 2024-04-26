@@ -176,25 +176,3 @@
         </div>
     </body>
 </html>
-<?php
-
-use Parse\ParseQuery;
-
-$query = new ParseQuery("Posts");
-
-try {
-    $results = $query->find();
-    // Check if any posts were retrieved
-    if (count($results) > 0) {
-        // Posts retrieved successfully.
-        foreach ($results as $post) {
-            echo $post->get('title') . ': ' . $post->get('content') . ' - Author: ' . $post->get('author') . '<br>';
-        }
-    } else {
-        echo "No posts found.";
-    }
-} catch (ParseException $ex) {
-    // Query failed.
-    echo "Error: " . $ex->getCode() . " " . $ex->getMessage();
-}
-?>
