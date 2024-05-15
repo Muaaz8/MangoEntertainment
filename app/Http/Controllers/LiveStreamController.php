@@ -11,11 +11,13 @@ class LiveStreamController extends Controller
     public function stream()
     {
         $user = session()->get('user');
+
         if($user){
             $user_id = $user['id'];
             $user_name = $user['name'];
             $room_id = uniqid();
-            return view('streaming.check',compact('user_id','user_name','room_id'));
+            return view('video.index',compact('user_id','user_name','room_id'));
+            // return view('streaming.check',compact('user_id','user_name','room_id'));
         }else{
             return redirect()->back();
         }
