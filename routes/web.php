@@ -18,6 +18,7 @@ Route::get('/', function () {
 // })->name('stream2');
 
 Route::get('/stream',[LiveStreamController::class,'stream'])->name('stream');
+Route::get('/joinStream',[LiveStreamController::class,'joinStream'])->name('joinStream');
 Route::get('/join-stream/{room_id}',[LiveStreamController::class,'join_stream'])->name('join_stream');
 
 Route::get('signup',[AuthController::class,'signup'])->name('signup');

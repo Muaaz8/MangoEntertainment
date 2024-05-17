@@ -42,15 +42,31 @@
     <h1>
         Zego RTC Video Call
     </h1>
-    <h4>Local video</h4>
-    <div id="local-video"></div>
-    <button class="btn btn-primary" id="screenShareButton" onclick="screenShare()"> Screen Share </button>
-    <button class="btn btn-primary d-none" id="stopScreenShareButton" onclick="stopScreenShare()"> Stop Screen Share </button>
-    <button class="btn btn-primary" onclick="camera()"> Camera </button>
-    <button class="btn btn-primary" onclick="microphone()"> Microphone </button>
-    <h4>Remote video</h4>
-    <button class="btn btn-primary" onclick="audio()"> Audio </button>
-    <div id="remote-video"></div>
+    <div class="row">
+
+        <div class="col-md-9">
+            <h4>Local video</h4>
+            <div id="local-video"></div>
+            <button class="btn btn-primary" id="screenShareButton" onclick="screenShare()"> Screen Share </button>
+            <button class="btn btn-primary d-none" id="stopScreenShareButton" onclick="stopScreenShare()"> Stop Screen Share </button>
+            <button class="btn btn-primary" onclick="camera()"> Camera </button>
+            <button class="btn btn-primary" onclick="microphone()"> Microphone </button>
+            <h4>Remote video</h4>
+            <div id="remote-video"></div>
+            <button class="btn btn-primary" onclick="audio()"> Audio </button>
+            <button class="btn btn-primary" onclick="publish()"> Publish Live Stream </button>
+            <button class="btn btn-primary" onclick="unpublish()"> Unpublish Live Stream </button>
+            <button class="btn btn-primary" onclick="endLiveStream()"> End Live Stream </button>
+        </div>
+        <div class="col-md-2" style="border:solid;border-color:black ">
+            <div id="allMessages"></div>
+            <div>
+                <input type="text" class="form-control mt-2" id="message">
+                <button class="btn btn-primary mt-2" onclick="sendMessage()"> Send Message</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script>
@@ -85,7 +101,7 @@
         localStream = await zg.createZegoStream(option);
         localStream.playVideo(document.querySelector("#local-video"));
         // localStream is the MediaStream object created by calling creatStream in the previous step.
-        zg.startPublishingStream(streamID, localStream)
+        // zg.startPublishingStream(streamID, localStream)
 
         // const remoteStream = await zg.startPlayingStream(streamID);
         // // The remote-video is the <div> element's id on your webpage.
@@ -145,8 +161,6 @@
 
     async function screenShare(){
         document.querySelector('#remote-video').innerHTML = '';
-        // document.querySelector('#screenShareButton')
-        // document.querySelector('#stopScreenShareButton')
         screenStream = await zg.createZegoStream({
             screen: {
                 videoBitrate: 1500,
@@ -160,10 +174,11 @@
             },
         });
         screenStreamId = screenStream.zegoStream.Ie[0].id;
+        console.log(screenStreamId);
         document.querySelector('#screenShareButton').classList.add('d-none');
         document.querySelector('#stopScreenShareButton').classList.remove('d-none');
         screenStream.playVideo(document.querySelector("#remote-video"));
-        const publisRes = zg.startPublishingStream(screenStreamId, screenStream);
+        // const publisRes = zg.startPublishingStream(screenStreamId, screenStream);
     }
 
     function stopScreenShare(){
@@ -195,8 +210,41 @@
         }
     }
 
+    function publish(){
+        zg.startPublishingStream(streamID, localStream);
+        zg.startPublishingStream(screenStreamId, screenStream);
+    }
 
+    function unpublish(){
+        zg.stopPublishingStream(streamID);
+        zg.stopPublishingStream(screenStreamId);
+    }
 
+    function endLiveStream(){
+        zg.destroyStream(localStream);
+        zg.destroyStream(screenStream);
+        window.location = '/';
+    }
+
+    async function sendMessage(){
+        inputMessage = document.querySelector('#message').value;
+        console.log(inputMessage)
+        try {
+            const isSent = await zg.sendBroadcastMessage(roomID, inputMessage)
+            console.log('>>> sendMsg success,', isSent);
+        } catch (error) {
+            console.log('>>> sendMsg, error:', error);
+        };
+    }
+
+    zg.on('IMRecvBroadcastMessage', (roomID, chatData) => {
+        let message = {
+            ID:'zego' + chatData[0].fromUser.userID + chatData[0].sendTime,
+            name: chatData[0].fromUser.userName,
+            content: chatData[0].message
+        }
+        document.querySelector("#allMessages").append('<p><strong>'+message.name+'</strong>:'+message.content+'.</p>');
+    });
 </script>
 
 </html>
