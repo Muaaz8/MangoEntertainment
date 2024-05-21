@@ -75,7 +75,7 @@
     const roomID = "6644de0a19595";
     const userID = "cFR2dMKDtw";
     const userName = "test";
-    const token = "04AAAAAGZHfJEAEHZyenJvb2NtMzk2Y3dibHQAsPRINNa7UhmIxePYImG5uFu1VwN5u2j8L9aKGCcKmAMWDvIcgkXDEVjqheO3tQdwVcqFboUnN5OrYgKyzhzBM82Zib7/pDD8OKGMR79I26Eidj+be/u8oYMfWD48Rn7RZDK/1eOM8FZWjQrHP06KgnGWk/fG0zd6WIxfWHCBHfUPXvPsKFPIpg24gvjjic3/fdXGWAPrCl0Jp+1DsE3CiOd0uX9Vlf+JrWUX43dNjgj3";
+    const token = "04AAAAAGZN/k0AEDQ2emF3YWF2aXE5dGdvazgAsArGRrO7S49w1tcBHn9iMF7o2t1+xr/vP10w2EVBZI5p9m0ZYLtxu8TmktIvgfuv+ZRF+g8RZ+9G/cVU8Mxd4NHSyCSh1tBhZatmnz0e802juElpRmTc4UpfRPzBiR3aujT9QJOptcxTB91VDUWsmIufb6lgG1myHPevWaI1V5DgQzMs9qnRFuxlZbNaamwfMJ4UUQ73YDPjB1Lyq9Zr42M6DXPXXd9MuOPsEUIi6oYz";
     const streamID = '{{uniqid()}}';
     var localStream;
     var screenStreamId;
@@ -228,9 +228,11 @@
 
     async function sendMessage(){
         inputMessage = document.querySelector('#message').value;
-        console.log(inputMessage)
+        document.querySelector('#message').value = "";
         try {
             const isSent = await zg.sendBroadcastMessage(roomID, inputMessage)
+            html = '<p>'+userName+': '+inputMessage+'</p>';
+            document.querySelector("#allMessages").insertAdjacentHTML('beforeend',html);
             console.log('>>> sendMsg success,', isSent);
         } catch (error) {
             console.log('>>> sendMsg, error:', error);
@@ -243,7 +245,8 @@
             name: chatData[0].fromUser.userName,
             content: chatData[0].message
         }
-        document.querySelector("#allMessages").append('<p><strong>'+message.name+'</strong>:'+message.content+'.</p>');
+        html = '<p>'+message.name+': '+message.content+'</p>';
+        document.querySelector("#allMessages").insertAdjacentHTML('beforeend',html);
     });
 </script>
 
