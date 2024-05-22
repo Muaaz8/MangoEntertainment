@@ -1,0 +1,211 @@
+@font-face {
+    font-family: San Francisco Pro Display;
+    src: url(./SanFranciscoProDisplay/SF-Pro-Display-Regular.otf);
+  }
+.hero-section{
+    background: #000000;
+    font-family: San Francisco Pro Display!important;
+}
+.download-stream{
+    text-align: center;
+   padding:14px 110px 14px 110px;
+   background: linear-gradient(to right,
+                rgba(254, 236, 255, 1),
+                rgba(254, 202, 255, 1),
+                rgba(254, 181, 255, 1),
+                rgba(255, 219, 231, 1),
+                rgba(255, 244, 214, 1),
+                rgba(243, 252, 215, 1),
+                rgba(210, 245, 238, 1),
+                rgba(195, 239, 255, 1),
+                rgba(251, 239, 255, 1)
+            );
+}
+.download-stream p{
+    margin: 0;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;
+    font-style: normal; */
+}
+.download-stream a{
+    text-decoration: none;
+    color: #000000;
+    margin-left: 5px;
+}
+.hero-header{
+    height: 80px;
+    padding: 20px 32px 20px 32px;
+    font-family: San Francisco Pro Display;
+
+}
+.hero-sec-nav ul{
+   list-style: none;
+   padding: 0;
+   display: flex;
+   color: #fff;
+   gap: 48px;
+   justify-content: center;
+   margin: 5px 0px;
+}
+
+.hero-sec-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.login-button{
+    text-align: right;
+}
+.login-button button {
+    padding: 5px 15px 6px 15px;
+    width: 150px;
+    height: 39px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    line-height: 20px;
+    border: none;
+    margin-top: 3px;
+}
+.sec-1{
+   text-align: center;
+}
+.sec-1 h2{
+    font-weight: 900;
+    font-size: 72px;
+    color: rgba(255, 255, 255, 1);
+}
+.watch-live-button{
+    width: 150px;
+    height: 39px;
+    border-radius: 10px;
+    background: rgba(249, 192, 52, 1);
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+}
+.box_videos_sec {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .video_box {
+    position: relative;
+    padding-bottom: 140%;
+    overflow: hidden;
+    border: 5px solid rgba(249, 192, 52, 1);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  .video_box video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; /*to cover all the box*/
+  }
+  @media (min-width:576px) and (max-width:768px){
+    .main-logo{
+        margin-top: 5px;
+    }
+    .login-button button {
+        padding: 5px 15px 6px 15px;
+        width: 120px;
+        height: 32px;
+    }
+    .hero-sec-nav ul {
+        gap: 28px;
+        justify-content: right;
+        margin: 6px 0px;
+    }
+  }
+  @media (min-width:320px) and (max-width:575px){
+      .download-stream{
+        padding: 0;
+      }
+      .main-logo{
+        text-align: center;
+      }
+      .hero-header {
+        margin: 0px 0px 65px 0px;
+    }
+      .hero-sec-nav ul{
+        gap: 30px;
+        margin: 15px 0px;
+      }
+      .sec-1 h2{
+        font-size: 40px;
+      }
+      .login-button {
+        text-align: center;
+    }
+    .login-button button {
+         padding:0;
+        width: 110px;
+        height: 30px;
+    }
+    .watch-live-button {
+        width: 130px;
+        height: 30px;
+    }
+    .swiper-wrapper {
+        transform: translate3d(0px, 0, 0);
+    }
+  }
+
+
+
+
+/*swiper start */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    /* height: 500px; */
+  }
+  .swiper-wrapper {
+    transform: translate3d(-100px, 0, 0);
+}
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-margin-1{
+    margin-top: 8rem;
+  }
+  .swiper-margin-2{
+    margin-top: 4rem;
+  }
+  .swiper-margin-3{
+    margin-top: 10rem;
+  }
+  .swiper-margin-4{
+    margin-top: 0px;
+  }
+  .swiper-margin-5{
+    margin-top: 80px;
+  }
+  .swiper-margin-6{
+    margin-top: 80px;
+  }
+  .swiper-margin-7{
+    margin-top: 80px;
+  }
+/* swiper End */
+
+/*--------- hero-section-css-End-------------*/
