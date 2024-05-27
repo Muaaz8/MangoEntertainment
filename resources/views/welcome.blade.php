@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mango Entertainment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
@@ -99,49 +99,49 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide swiper-margin-1">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-1.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-2">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-2.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-3">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-3.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-4">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-4.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-1">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-1.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-2">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-2.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>
                       </div>
                       <div class="swiper-slide swiper-margin-3">
                         <div class="video_box">
-                          <video>
+                          <video muted autoplay>
                             <source src="./videos/video-3.webm" type='video/webm; codecs="vp8, vorbis"' />
                           </video>
                         </div>

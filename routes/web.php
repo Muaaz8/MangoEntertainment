@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LiveStreamController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/my-profile', [ProfileController::class,'my_profile']);
 
 
 // Route::get('/stream', function () {
