@@ -82,7 +82,11 @@
                     <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12">
                         <div class="row">
                             <div class="image-div">
+                                @if($results->avatar)
                                 <img src="{{ $results->avatar->geturl() }}" alt="">
+                                @else
+                                <img src="{{asset('img/user-icon.png')}}" alt="">
+                                @endif
                             </div>
                         </div>
                         <div class="row mt-3">

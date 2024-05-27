@@ -4,10 +4,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LiveStreamController;
 use App\Http\Controllers\ProfileController;
+use ZEGO\ZegoServerAssistant;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/token', function () {
+    //return view('welcome');
+
+        $appId = 1101904631;
+        $serverSecret = '3131e55d1d7505c2655a85258bce52df';
+        $userId = 'TEST';
+        $expire = 3600; // 1 hour
+        
+        $token = ZegoServerAssistant::generateToken04($appId, $userId, $serverSecret, $expire, '');
+        //ZegoServerAssistant::generateToken04()
+        var_dump($token->token);
+        die;
+
+})->name('tok');
 
 Route::get('/my-profile', [ProfileController::class,'my_profile']);
 
