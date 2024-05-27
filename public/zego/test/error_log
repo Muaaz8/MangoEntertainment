@@ -1,0 +1,50 @@
+[27-May-2024 08:14:23 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 30
+[27-May-2024 08:14:28 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 30
+[27-May-2024 08:14:51 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:15:01 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:15:14 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:15:23 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:16:02 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:16:41 UTC] PHP Fatal error:  Uncaught Error: Object of class ZEGO\ZegoAssistantToken could not be converted to string in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:17:41 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type ZEGO\ZegoAssistantToken as array in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 32
+[27-May-2024 08:18:10 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type ZEGO\ZegoAssistantToken as array in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 31
+[27-May-2024 08:19:05 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type ZEGO\ZegoAssistantToken as array in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 27
+[27-May-2024 09:08:55 UTC] PHP Warning:  Undefined array key "UserID" in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 20
+[27-May-2024 09:08:55 UTC] PHP Fatal error:  Uncaught TypeError: ZEGO\ZegoServerAssistant::generateToken04(): Argument #2 ($userId) must be of type string, null given, called in /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php on line 26 and defined in /home/fnz00mu7o8we/public_html/public/token/src/ZEGO/ZegoServerAssistant.php:32
+Stack trace:
+#0 /home/fnz00mu7o8we/public_html/public/token/test/dummy1.php(26): ZEGO\ZegoServerAssistant::generateToken04()
+#1 {main}
+  thrown in /home/fnz00mu7o8we/public_html/public/token/src/ZEGO/ZegoServerAssistant.php on line 32
