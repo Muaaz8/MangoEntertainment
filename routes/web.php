@@ -9,6 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/generate-token', function () {
+    // Execute the token generator script
+    return response()->file(public_path('zego\src\ZEGO\ZegoServerAssistant.php'));
+});
+
 Route::get('/my-profile', [ProfileController::class,'my_profile']);
 
 
