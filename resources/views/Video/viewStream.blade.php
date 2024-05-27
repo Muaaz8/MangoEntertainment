@@ -372,7 +372,7 @@
                 remoteVideoElement.muted = true;
                 remoteVideoElement.style.width = '100%';
                 remoteVideoElement.style.height = '100%';
-                if (key === 1) {
+                if (key === 0) {
                     document.getElementById('local-video').appendChild(remoteVideoElement);
                     localStreamId = stream.streamID;
                 } else {
