@@ -317,10 +317,10 @@
 <script>
     const appId = 1101904631;
     const server = "wss://webliveroom1101904631-api.coolzcloud.com/ws";
-    const roomID = "6644de0a19595";
-    const userID = "0mf2FtBXsu";
-    const userName = "test2";
-    const token = "04AAAAAGZN/noAEHRiczBqYnFneXR6ZnEwM3cAsLb6X7RhMViEWvs7hSfEEqs9qHKVzo35YUi6or/X1qWvvHWH+MNN5NqpncdVCpEBAB1QkJvhjsrDcc133QaVZ5iqIv5zdnZKCUfgGPwoLzvb8uzOiaaqkdgEH8NDssZia5AksjR6W+SJH2uORL15PeDK0ZxtUb0rLDNGK04EZUOLUAVFmYNoihehzCo8D9tsLa6I+esAPoulGo2Bb592ZO5BtDoHnTbLQUmo61mwGUjK";
+    const roomID = "{{ $room_id }}";
+    const userID = "{{ $user_id }}";
+    const userName = "{{ $user_name }}";
+    const token = "{{ $assistantToken->token }}";
     const streamID = '2';
     var localStream;
     var screenStream;
@@ -372,7 +372,7 @@
                 remoteVideoElement.muted = true;
                 remoteVideoElement.style.width = '100%';
                 remoteVideoElement.style.height = '100%';
-                if (key === 0) {
+                if (key === 1) {
                     document.getElementById('local-video').appendChild(remoteVideoElement);
                     localStreamId = stream.streamID;
                 } else {

@@ -75,7 +75,7 @@
     const roomID = "6644de0a19595";
     const userID = "cFR2dMKDtw";
     const userName = "test";
-    const token = "04AAAAAGZN/k0AEDQ2emF3YWF2aXE5dGdvazgAsArGRrO7S49w1tcBHn9iMF7o2t1+xr/vP10w2EVBZI5p9m0ZYLtxu8TmktIvgfuv+ZRF+g8RZ+9G/cVU8Mxd4NHSyCSh1tBhZatmnz0e802juElpRmTc4UpfRPzBiR3aujT9QJOptcxTB91VDUWsmIufb6lgG1myHPevWaI1V5DgQzMs9qnRFuxlZbNaamwfMJ4UUQ73YDPjB1Lyq9Zr42M6DXPXXd9MuOPsEUIi6oYz";
+    const token = "04AAAAAGZV0hoAEG9wcjh6cmMyM2Z5N2xvdHgAsLKRoTUPMdPq60j5T0F83y9quvtalBNXcozsqvr0U2VYOBzBQJPY/0UakPErYJjgPbNe3EbNbd8p9R+AospCcSy7jHbvs1J8oAJWh6LuKl9D9JLl3s4moHttp+fEynmASFEwyeVy4pzOkUwG3qLv/9Ui7d35qZ8z020apCzgWYJLKJY4gFPCG5ZvkxTSXIP1REPQDwsug1CXXUHcmM/l4wQU3GMYHlOR0m53awsnU0v5";
     const streamID = '{{uniqid()}}';
     var localStream;
     var screenStreamId;
