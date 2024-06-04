@@ -10,6 +10,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
+
 // Route::get('/token', function () {
 //     //return view('welcome');
 
@@ -37,8 +39,8 @@ Route::get('/my-profile', [ProfileController::class,'my_profile']);
 // })->name('stream2');
 
 Route::get('/stream',[LiveStreamController::class,'stream'])->name('stream');
-Route::get('/joinStream',[LiveStreamController::class,'joinStream'])->name('joinStream');
-Route::get('/join-stream/{room_id}',[LiveStreamController::class,'join_stream'])->name('join_stream');
+// Route::get('/joinStream',[LiveStreamController::class,'joinStream'])->name('joinStream');
+Route::get('/joinStream/{room_id}',[LiveStreamController::class,'joinStream'])->name('joinStream');
 
 Route::get('signup',[AuthController::class,'signup'])->name('signup');
 Route::post('register',[AuthController::class,'register'])->name('register');

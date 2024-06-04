@@ -8,6 +8,9 @@ use Illuminate\Validation\ValidationException;
 use ZEGO\ZegoServerAssistant;
 use ZEGO\ZegoAssistantToken;
 use ZEGO\ZegoErrorCodes;
+use Parse\ParseException;
+use Parse\ParseUser;
+use Parse\ParseQuery;
 
 class LiveStreamController extends Controller
 {
@@ -26,7 +29,7 @@ class LiveStreamController extends Controller
         }
     }
 
-    public function joinStream(){
+    public function joinStream($roomId){
         $user = session()->get('user');
 
         if($user){
@@ -45,7 +48,7 @@ class LiveStreamController extends Controller
             );
             $user_id = $user['id'];
             $user_name = $user['name'];
-            $room_id = "6644de0a19595";
+            $room_id = $roomId;
             return view('video.viewStream',compact('user_id','user_name','room_id','assistantToken'));
             // return view('streaming.check',compact('user_id','user_name','room_id'));
         }else{
@@ -53,16 +56,14 @@ class LiveStreamController extends Controller
         }
     }
 
-    public function join_stream($id)
-    {
-        $user = session()->get('user');
-        if($user){
-            $user_id = $user['id'];
-            $user_name = $user['name'];
-            $room_id = $id;
-            return view('streaming.check',compact('user_id','user_name','room_id'));
-        }else{
-            return redirect()->back();
+    public function stream_list(){
+        $query = new ParseQuery("Streaming");
+        $query->includeKey('*');
+        try {
+            $results = $query->equalTo("streaming",true)->find();
+        } catch (ParseException $ex) {
         }
+
+        return view('streamList',compact('results'));
     }
 }
