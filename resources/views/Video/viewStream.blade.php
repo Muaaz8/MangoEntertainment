@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="ZegoExpressWebRTC-3.4.0.js"></script>
+    <script src="{{ asset('ZegoExpressWebRTC-3.4.0.js') }}"></script>
 </head>
 <body>
     <div class="single-live-section">
@@ -27,62 +27,62 @@
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Gold.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Gold.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Silver.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Silver.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Bronze.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Bronze.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
                                         <span style="margin: 0px 7px 0px 5px; font-weight: 500;">4</span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
                                         <span style="margin: 0px 7px 0px 5px; font-weight: 500;">5</span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
                                         <span style="margin: 0px 7px 0px 5px; font-weight: 500;">6</span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
 
@@ -90,42 +90,42 @@
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Gold.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Gold.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Silver.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Silver.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
-                                        <span><img src="./img/Bronze.png" alt=""></span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span><img src="{{ asset('img/Bronze.png') }}" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                                 <div class="weekly-update">
                                     <div class="wup-1">
                                         <span style="margin: 0px 7px 0px 5px; font-weight: 500;">1</span>
-                                        <span class="pf-img"><img src="./img/profile-image.png" alt=""></span>
+                                        <span class="pf-img"><img src="{{ asset('img/profile-image.png') }}" alt=""></span>
                                     </div>
                                     <div class="wup-2">
                                         <p>Enrique Perkins</p>
-                                        <p>Gifts:<img src="./img/dollar-coin.png" alt=""><span>100k</span></p>
+                                        <p>Gifts:<img src="{{ asset('img/dollar-coin.png') }}" alt=""><span>100k</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -136,16 +136,16 @@
                     <div class="single-video-content">
                         <div class="video-live-sec" id="remote-video">
                         </div>
-                        <div class="small-screen" id="local-video"></div>
+                        {{-- <div class="small-screen" id="local-video"></div> --}}
                     </div>
                     <div class="video-live-detail">
                         <div class="vl-detail-right">
                            <div class="vl-child-1">
-                            <img src="./img/profile-image.png" alt="">
+                            <img src="{{ asset('img/profile-image.png') }}" alt="">
                            </div>
                            <div class="vl-child-2">
-                            <p>Kayalee Jane<img src="./img/profile-details-img.png" alt=""></p>
-                            <p>id: 01251421 <a href=""><img src="./img/tabler_copy.png" alt=""></a></p>
+                            <p>Kayalee Jane<img src="{{ asset('img/profile-details-img') }}.png" alt=""></p>
+                            <p>id: 01251421 <a href=""><img src="{{ asset('img/tabler_copy.png') }}" alt=""></a></p>
                             <span class="age-sec">
                                 <i class="fa-solid fa-mars"></i>
                                     24</span>
@@ -154,8 +154,8 @@
                            <!-- <div class="vl-child-3"></div> -->
                         </div>
                         <div class="vl-detail-left">
-                           <p>369<img src="./img/groups.png" alt=""></p>
-                           <button class="subscribe-button">Subscribe<img src="./img/bolt (light).png"
+                           <p>369<img src="{{ asset('img/groups.png') }}" alt=""></p>
+                           <button class="subscribe-button">Subscribe<img src="{{ asset('img/bolt (light).png') }}"
                             alt=""></button>
                            <button class="follow-button">Follow</button>
                         </div>
@@ -166,66 +166,66 @@
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/bag.png" alt="">
+                                    <img src="{{ asset('img/bag.png') }}" alt="">
                                     <p>Dark fantasy</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
 
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/almeic-stone-nwly.png" alt="">
+                                    <img src="{{ asset('img/almeic-stone-nwly') }}.png" alt="">
                                     <p>Almeic Stone</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/shaphire.png" alt="">
+                                    <img src="{{ asset('img/shaphire.png') }}" alt="">
                                     <p>Shaphire</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/blade.png" alt="">
+                                    <img src="{{ asset('img/blade.png') }}" alt="">
                                     <p>Blade</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/coin.png" alt="">
+                                    <img src="{{ asset('img/coin.png') }}" alt="">
                                     <p>coin</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/scroll.png" alt="">
+                                    <img src="{{ asset('img/scroll.png') }}" alt="">
                                     <p>scroll</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/ring.png" alt="">
+                                    <img src="{{ asset('img/ring.png') }}" alt="">
                                     <p>Ring</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/bag.png" alt="">
+                                    <img src="{{ asset('img/bag.png') }}" alt="">
                                     <p>Dark fantasy</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="gift-slide-sec">
-                                    <img src="./img/bag.png" alt="">
+                                    <img src="{{ asset('img/bag.png') }}" alt="">
                                     <p>Dark fantasy</p>
-                                    <span><img src="./img/dollar-coin.png" alt="">200</span>
+                                    <span><img src="{{ asset('img/dollar-coin.png') }}" alt="">200</span>
                                 </div>
                               </div>
                             </div>
@@ -234,7 +234,7 @@
 
                           <div class="balance">
                             <div class="blnce-1">
-                                <p>Balance: 30 <img src="./img/dollar-coin.png" alt=""></p>
+                                <p>Balance: 30 <img src="{{ asset('img/dollar-coin.png') }}" alt=""></p>
                                 <!-- <span></span> -->
                                 <button class="get-coins-button">Get Coins</button>
                             </div>
@@ -255,9 +255,9 @@
                     <div class="comment-section">
                        {{--<div class="wrap-up">
                             <div class="com-sec">
-                                <img class="cmnt" src="./img/profile-image.png" alt="">
+                                <img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">
                                 <p>vant_21:</p>
-                                <span><img src="./img/gemstones.png" alt="">LV.53</span>
+                                <span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span>
                             </div>
                             <div class="comments">
                                     <p>The Game is to Harrrzd</p>
@@ -265,9 +265,9 @@
                        </div>
                         <div class="wrap-up">
                         <div class="com-sec">
-                            <img class="cmnt" src="./img/profile-image.png" alt="">
+                            <img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">
                         <p>vant_21:</p>
-                        <span><img src="./img/gemstones.png" alt="">LV.53</span>
+                        <span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span>
                        </div>
                        <div class="comments">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -275,9 +275,9 @@
                        </div>
                        <div class="wrap-up">
                         <div class="com-sec">
-                            <img class="cmnt" src="./img/profile-image.png" alt="">
+                            <img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">
                         <p>vant_21:</p>
-                        <span><img src="./img/gemstones.png" alt="">LV.53</span>
+                        <span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span>
                        </div>
                        <div class="comments">
                         <p>are you finish the 2part</p>
@@ -285,9 +285,9 @@
                        </div>
                        <div class="wrap-up">
                         <div class="com-sec">
-                            <img class="cmnt" src="./img/profile-image.png" alt="">
+                            <img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">
                         <p>vant_21:</p>
-                        <span><img src="./img/gemstones.png" alt="">LV.53</span>
+                        <span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span>
                        </div>
                        <div class="comments">
                         <p>The Game is to Harrrzd</p>
@@ -295,9 +295,9 @@
                        </div>
                        <div class="wrap-up">
                         <div class="com-sec">
-                            <img class="cmnt" src="./img/profile-image.png" alt="">
+                            <img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">
                         <p>vant_21:</p>
-                        <span><img src="./img/gemstones.png" alt="">LV.53</span>
+                        <span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span>
                        </div>
                        <div class="comments">
                         <p>The Game is to Harrrzd</p>
@@ -315,13 +315,14 @@
     </div>
 </body>
 <script>
-    const appId = 1101904631;
-    const server = "wss://webliveroom1101904631-api.coolzcloud.com/ws";
+    const appId = {{ $appId }};
+    const server = "wss://webliveroom2023938396-api.coolzcloud.com/ws";
     const roomID = "{{ $room_id }}";
     const userID = "{{ $user_id }}";
     const userName = "{{ $user_name }}";
     const token = "{{ $assistantToken->token }}";
     const streamID = '2';
+
     var localStream;
     var screenStream;
 
@@ -361,7 +362,6 @@
     })
 
     zg.on('roomStreamUpdate', async (roomID, updateType, streamList) => {
-        console.log(streamList)
         if (updateType === 'ADD') {
             streamList.forEach(async (stream, key) => {
                 const remoteStream = await zg.startPlayingStream(stream.streamID,option);
@@ -372,7 +372,7 @@
                 remoteVideoElement.muted = true;
                 remoteVideoElement.style.width = '100%';
                 remoteVideoElement.style.height = '100%';
-                if (key === 0) {
+                if (key === 1) {
                     document.getElementById('local-video').appendChild(remoteVideoElement);
                     localStreamId = stream.streamID;
                 } else {
@@ -394,17 +394,20 @@
                     if (remoteVideoElement) {
                         remoteVideoElement.parentNode.removeChild(remoteVideoElement);
                     }
-                    localStreamId = null;
+                    remoteStreamId = null;
                 }
             });
+            if(remoteStreamId == null && localStreamId == null){
+                const homeRoute = "{{ route('home') }}";
+                window.location.replace(homeRoute);
+            }
         }
     });
 
     async function sendMessage(){
-
         inputMessage = document.querySelector('#message').value;
-        html = '<div class="wrap-up"><div class="com-sec"><img class="cmnt" src="./img/profile-image.png" alt="">'+
-                '<p>'+userName+':</p><span><img src="./img/gemstones.png" alt="">LV.53</span></div>'+
+        html = '<div class="wrap-up"><div class="com-sec"><img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">'+
+                '<p>'+userName+':</p><span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span></div>'+
                 '<div class="comments"><p>'+inputMessage+'</p></div></div>';
         document.querySelector('#message').value = "";
         try {
@@ -422,8 +425,8 @@
             name: chatData[0].fromUser.userName,
             content: chatData[0].message
         }
-        html = '<div class="wrap-up"><div class="com-sec"><img class="cmnt" src="./img/profile-image.png" alt="">'+
-                '<p>'+message.name+':</p><span><img src="./img/gemstones.png" alt="">LV.53</span></div>'+
+        html = '<div class="wrap-up"><div class="com-sec"><img class="cmnt" src="{{ asset('img/profile-image.png') }}" alt="">'+
+                '<p>'+message.name+':</p><span><img src="{{ asset('img/gemstones.png"') }} alt="">LV.53</span></div>'+
                 '<div class="comments"><p>'+message.content+'</p></div></div>';
         document.querySelector(".comment-section").insertAdjacentHTML('beforeend',html);
     });

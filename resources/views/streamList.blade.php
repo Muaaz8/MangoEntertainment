@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="{{ asset('css/stylelist.css') }}">
 </head>
 
@@ -945,23 +946,20 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="swiper top-streams-Swiper">
-
-                                                @foreach ($results as $result)
-                                                    <div class="swiper-wrapper" style="cursor: pointer;" onclick="window.location.href='/joinStream/{{ $result->roomId }}'">
-                                                        <div class="swiper-slide">
+                                                <div class="swiper-wrapper">
+                                                    @foreach ($results as $result)
+                                                        <div class="swiper-slide" onclick="window.location.href='/joinStream/{{ $result->AuthorUid }}'">
                                                             <div class="main-cont">
-                                                                {{-- <a href="{{ route('joinStream',['room_id'=>$result->roomId]) }}"> --}}
-                                                                    <div class="top-steams">
-                                                                        <img class="img-fluid" src="{{ $result->image->geturl() }}"
-                                                                            alt="">
-                                                                        <div class="lives-div">
-                                                                            <span>LIVE</span>
-                                                                        </div>
-                                                                        <div class="viewers-div">
-                                                                            <span>{{ $result->viewersCountLive }} viewers</span>
-                                                                        </div>
+                                                                <div class="top-steams">
+                                                                    <img class="img-fluid" src="{{ $result->image?$result->image->geturl():asset('img/future red dead.jpg') }}"
+                                                                        alt="">
+                                                                    <div class="lives-div">
+                                                                        <span>LIVE</span>
                                                                     </div>
-                                                                {{-- </a> --}}
+                                                                    <div class="viewers-div">
+                                                                        <span>{{ $result->viewersCountLive }} viewers</span>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="streams-details">
                                                                     <div class="de-img">
                                                                         <img src="{{ $result->Author->avatar->geturl() }}" alt="">
@@ -972,16 +970,12 @@
                                                                         <p class="add-spn">
                                                                             @foreach ($result->tag as $item)
                                                                                 <span>{{ $item }}</span>
-                                                                            @endforeach
-                                                                        </p>
-                                                                    </div>
+                                                                            @endforeach                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                @endforeach
-
-                                                <!-- <div class="swiper-pagination"></div> -->
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -85,7 +85,7 @@
             </div>
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 mb-4 mt-5">
-                    <button class="watch-live-button">Watch live</button>
+                    <button class="watch-live-button" onclick="window.location.href='/stream-list'">Watch live</button>
                 </div>
             </div>
            </div>

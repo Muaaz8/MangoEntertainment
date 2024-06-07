@@ -33,9 +33,9 @@ class LiveStreamController extends Controller
         $user = session()->get('user');
 
         if($user){
-            $appId = 1101904631;
+            $appId = 2023938396;
             $userId = $user['id'];
-            $secret = '3131e55d1d7505c2655a85258bce52df';
+            $secret = 'e428369662d80362cc2e0a15ba6e5cf9';
             $effectiveTimeInSeconds = 3600;
             $payload = "";
 
@@ -49,8 +49,7 @@ class LiveStreamController extends Controller
             $user_id = $user['id'];
             $user_name = $user['name'];
             $room_id = $roomId;
-            return view('video.viewStream',compact('user_id','user_name','room_id','assistantToken'));
-            // return view('streaming.check',compact('user_id','user_name','room_id'));
+            return view('video.viewStream',compact('appId','user_id','user_name','room_id','assistantToken'));
         }else{
             return redirect()->back();
         }
@@ -62,6 +61,7 @@ class LiveStreamController extends Controller
         try {
             $results = $query->equalTo("streaming",true)->find();
         } catch (ParseException $ex) {
+            dd('catch',$results);
         }
 
         return view('streamList',compact('results'));
