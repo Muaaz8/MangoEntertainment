@@ -34,9 +34,33 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-3">
-                        <div class="single-login-button">
-                            <button>Login</button>
-                        </div>
+                        @if (Route::has('login'))
+                        <nav class="-mx-3 flex flex-1 justify-end">
+                            @if(Session::has('user'))
+                                <div class="single-login-button">
+                                    {{-- <button onclick="window.location.href='{{ url('/joinStream') }}'">Join Stream</button>
+                                    <button onclick="window.location.href='{{ url('/stream') }}'">Start Stream</button> --}}
+                                    <button onclick="window.location.href='{{ url('/') }}'"> Dashboard </button>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    <button id="logout-button">Sign Out</button>
+                                </div>
+                            @else
+                                <div class="single-login-button">
+                                    <button onclick="window.location.href='{{ route('signin') }}'">
+                                        Log in
+                                    </button>
+
+                                @if (Route::has('register'))
+                                    <button onclick="window.location.href='{{ route('signup') }}'">
+                                        Register
+                                    </button>
+                                @endif
+                                </div>
+                            @endauth
+                        </nav>
+                    @endif
                     </div>
                 </div>
             </div>
@@ -970,7 +994,9 @@
                                                                         <p class="add-spn">
                                                                             @foreach ($result->tag as $item)
                                                                                 <span>{{ $item }}</span>
-                                                                            @endforeach                                                                    </div>
+                                                                            @endforeach
+                                                                        </p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>

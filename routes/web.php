@@ -49,4 +49,8 @@ Route::get('signin',[AuthController::class,'signin'])->name('signin');
 Route::post('login',[AuthController::class,'login'])->name('login');
 Route::post('view_forget_password',[AuthController::class,'view_forget_password'])->name('view_forget_password');
 
+Route::get('privacy-policy', function(){
+    return view('privacy-policy');
+});
+
 Route::post('/logout', [AuthController::class,'logout'])->name('logout');

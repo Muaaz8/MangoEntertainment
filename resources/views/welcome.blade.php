@@ -42,8 +42,8 @@
                             <nav class="-mx-3 flex flex-1 justify-end">
                                 @if(Session::has('user'))
                                     <div class="login-button">
-                                        <button onclick="window.location.href='{{ url('/joinStream') }}'">Join Stream</button>
-                                        <button onclick="window.location.href='{{ url('/stream') }}'">Start Stream</button>
+                                        {{-- <button onclick="window.location.href='{{ url('/joinStream') }}'">Join Stream</button>
+                                        <button onclick="window.location.href='{{ url('/stream') }}'">Start Stream</button> --}}
                                         <button onclick="window.location.href='{{ url('/') }}'"> Dashboard </button>
                                         {{-- <button>
                                             <form action="{{ route('logout') }}" method="POST">
@@ -134,62 +134,57 @@
         </section>
     </div>
 
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-     <!-- Swiper JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper1 = new Swiper(".video_box_swiper", {
-      // slidesPerView: 4.2,
-      spaceBetween: 30,
-      // centeredSlides: true,
-      // grabCursor: true,
-      loop: true,
-      speed: 500,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
-      keyboard: {
-        enabled: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 30,
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper1 = new Swiper(".video_box_swiper", {
+        // slidesPerView: 4.2,
+        spaceBetween: 30,
+        // centeredSlides: true,
+        // grabCursor: true,
+        loop: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // },
+        keyboard: {
+            enabled: true,
         },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 30,
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            },
+            768: {
+            slidesPerView: 2.5,
+            spaceBetween: 30,
+            },
+            1200: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+            },
         },
-        1200: {
-          slidesPerView: 3.5,
-          spaceBetween: 30,
+        scrollbar: {
+            el: ".discount-scrollbar",
+            // draggable: true,
         },
-      },
-      scrollbar: {
-        el: ".discount-scrollbar",
-        // draggable: true,
-      },
-      navigation: {
-        nextEl: ".discount-next",
-        prevEl: ".discount-prev",
-      },
-      // pagination: {
-      //     el: ".swiper-pagination",
-      //     clickable: true,
-      // },
-    });
-    document.getElementById('logout-button').addEventListener('click', function() {
-        document.getElementById('logout-form').submit();
-    });
-  </script>
+        navigation: {
+            nextEl: ".discount-next",
+            prevEl: ".discount-prev",
+        },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        });
+        document.getElementById('logout-button').addEventListener('click', function() {
+            document.getElementById('logout-form').submit();
+        });
+    </script>
 </body>
 
 </html>

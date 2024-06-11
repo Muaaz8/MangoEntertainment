@@ -22,7 +22,7 @@ class LiveStreamController extends Controller
             $user_id = $user['id'];
             $user_name = $user['name'];
             $room_id = uniqid();
-            return view('video.index',compact('user_id','user_name','room_id'));
+            return view('Video.index',compact('user_id','user_name','room_id'));
             // return view('streaming.check',compact('user_id','user_name','room_id'));
         }else{
             return redirect()->back();
@@ -49,7 +49,7 @@ class LiveStreamController extends Controller
             $user_id = $user['id'];
             $user_name = $user['name'];
             $room_id = $roomId;
-            return view('video.viewStream',compact('appId','user_id','user_name','room_id','assistantToken'));
+            return view('Video.viewStream',compact('appId','user_id','user_name','room_id','assistantToken'));
         }else{
             return redirect()->back();
         }
