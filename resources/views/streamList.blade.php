@@ -2895,6 +2895,9 @@ function togglesocial(id) {
             }
             event.preventDefault();
         }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            document.getElementById('logout-form').submit();
+        });
     </script>
 </body>
 

@@ -52,5 +52,8 @@ Route::post('view_forget_password',[AuthController::class,'view_forget_password'
 Route::get('privacy-policy', function(){
     return view('privacy-policy');
 });
+Route::get('terms-and-conditions', function(){
+    return view('term-and-condition');
+});
 
 Route::post('/logout', [AuthController::class,'logout'])->name('logout');
