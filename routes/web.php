@@ -5,12 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LiveStreamController;
 use App\Http\Controllers\ProfileController;
 use ZEGO\ZegoServerAssistant;
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
+use Parse\ParseQuery;
 
 // Route::get('/token', function () {
 //     //return view('welcome');
@@ -26,10 +21,6 @@ Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
 //         die;
 
 // })->name('tok');
-
-Route::get('/my-profile', [ProfileController::class,'my_profile']);
-
-
 // Route::get('/stream', function () {
 //     return view('Streaming.stream');
 // })->name('stream1');
@@ -37,9 +28,16 @@ Route::get('/my-profile', [ProfileController::class,'my_profile']);
 // Route::get('/check', function () {
 //     return view('Streaming.check');
 // })->name('stream2');
+// Route::get('/joinStream',[LiveStreamController::class,'joinStream'])->name('joinStream');
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
+
+Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
+Route::get('/my-profile', [ProfileController::class,'my_profile']);
 
 Route::get('/stream',[LiveStreamController::class,'stream'])->name('stream');
-// Route::get('/joinStream',[LiveStreamController::class,'joinStream'])->name('joinStream');
 Route::get('/joinStream/{room_id}',[LiveStreamController::class,'joinStream'])->name('joinStream');
 
 Route::get('signup',[AuthController::class,'signup'])->name('signup');
