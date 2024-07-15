@@ -221,12 +221,12 @@
 }
 #myDiv {
     display: none;
-    width: 48%;
+    /* width: 48%; */
     height: auto;
     position: absolute;
     background: #fff;
     z-index: 4;
-    top: 12rem;
+    top: 4rem;
     border: 4px solid rgba(223, 223, 225, 1);
     border-radius: 10px;
 }
@@ -1035,5 +1035,401 @@
 }
 
 /*-------------------Single-Section-Css-END----------------- */
+.profile-header {
+    /* height: 80px; */
+    padding: 15px 32px 15px 32px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba(223, 223, 225, 1);
+}
+.profile-sec-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    color: #fff;
+    gap: 48px;
+    justify-content: center;
+    margin: 5px 0px;
+    font-weight: 500;
+}
+.profile-sec-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.profile-login-image {
+    text-align: right;
+}
+
+.profile-login-image img {
+    border-radius: 40px;
+    border: 2px solid rgba(249, 192, 52, 1);
+}
+
+.profile-main-content .image-div {
+    width: 450.33px;
+    height: auto;
+}
+
+.profile-main-content .image-div img {
+    border-radius: 10.8px;
+}
+
+.profile-details {
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+}
+
+.profile-login-logout {
+    position: absolute;
+    min-width: 213px;
+    min-height: 209px;
+    z-index: 10;
+    background-color: #fff;
+    top: 85px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 14px -1px lightgrey;
+    display: none;
+}
+
+.pop-1 {
+    display: flex;
+    gap: 20px;
+    padding: 6px 10px;
+}
+.make-pro {
+    border-radius: 60px;
+    width: 90px;
+    height: 90px;
+    border: 3px solid #f6be33;
+}
+
+.pop-2 {
+    text-align: center;
+}
+
+.pop-2 h5 {
+    font-size: 16px;
+}
+
+.pop-2 p {
+    font-size: 12px;
+}
+
+.pop-3 {
+    min-height: 44px;
+    background: lightgrey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pop-3 ul {
+    margin-bottom: 0px;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.pop-3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pop-3 ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+@media (max-width:991px) and (min-width:768px) {
+    .profile-main-content .image-div img {
+        width: 100%;
+    }
+
+    .profile-main-logo {
+        margin-top: 2px;
+    }
+
+    .profile-main-logo img {
+        width: 100%;
+    }
+
+    .profile-sec-nav ul {
+        gap: 20px;
+        justify-content: flex-end;
+        margin: 8px 0px;
+        font-size: 14px;
+    }
+
+    .profile-header {
+        padding: 15px 0px 15px 0px;
+        align-items: center;
+    }
+
+    .download-app {
+        margin-left: 20px;
+    }
+
+    .dapct p {
+        font-size: 13.47px;
+        line-height: 14.71px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .dapct h4 {
+        font-size: 14px;
+    }
+
+    .qr-code {
+        padding: 20px 20px;
+        height: 140px;
+    }
+
+    .qr-code img {
+        width: 100%;
+    }
+
+    .qr-code hr {
+        margin: 0px 0px 0px -6px;
+        width: 112%;
+    }
+
+    .bio-sec {
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .profile-details {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .reach {
+        margin-top: 20px;
+    }
+
+    .reach ul {
+        padding: 8px 0px;
+        margin: 0;
+    }
+
+    .bordr {
+        padding-right: 20px;
+        height: 45px;
+    }
+
+    .bio-sec h4 {
+        font-size: 14px;
+        line-height: 23.87px;
+        margin-bottom: 2px;
+    }
+
+    .bio-sec p {
+        font-size: 12px;
+        font-weight: 400;
+        width: 100%;
+        line-height: 16.71px;
+        margin-bottom: 5px;
+    }
+
+    .detail-2 {
+        display: flex;
+        gap: 5px;
+    }
+
+    .subscribe-button {
+        font-size: 16px;
+        padding: 8px 8px;
+    }
+
+    .follow-button {
+        padding: 8px 8px;
+        font-size: 16px;
+    }
+
+    .video-content h4 {
+        padding-bottom: 5px;
+
+    }
+
+    .detail-1 span {
+        gap: 20px;
+    }
+}
+
+@media (max-width:1024px) and (min-width:991px) {
+    .profile-header {
+        padding: 15px 0px 15px 0px;
+    }
+
+    .profile-sec-nav ul {
+        gap: 40px;
+        justify-content: flex-end;
+    }
+
+    .profile-main-content .image-div img {
+        width: 100%;
+    }
+
+    /* .detail-1 span h5 {
+            font-size: 14px;
+            line-height: 15.48px;
+        } */
+    .profile-details {
+        display: flex;
+        gap: 15px;
+        /* justify-content: space-between; */
+        flex-direction: column;
+    }
+
+    .custom-div {
+        gap: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .detail-1 span {
+        gap: 35px;
+    }
+
+    .subscribe-button {
+        font-size: 16px;
+    }
+
+    .follow-button {
+        font-size: 16px;
+    }
+
+    .detail-2 {
+        display: flex;
+        gap: 5px;
+    }
+
+    .dapct p {
+        font-size: 14.47px;
+        line-height: 15.71px;
+        width: 230.16px;
+    }
+
+    .reach {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:1920px) and (min-width:1440px) {
+    .profile-main-content .image-div {
+        width: -webkit-fill-available;
+    }
+
+    .profile-main-content .image-div img {
+        width: 100%;
+
+    }
+
+    .profile-main-logo img {
+        width: 100%;
+    }
+
+    .dapct h4 {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .dapct p {
+        font-size: 18.47px;
+        line-height: 20.71px;
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .bio-sec h4 {
+        font-size: 22px;
+        line-height: 23.87px;
+    }
+
+    .bio-sec p {
+        font-size: 18px;
+        width: 80%;
+        line-height: 20.71px;
+    }
+
+    .bio-sec ul li a {
+        padding: 15.86px;
+        width: 60px;
+    }
+
+    .bio-sec h4 {
+        font-size: 22px;
+        line-height: 23.87px;
+        margin-bottom: 10px;
+    }
+
+    .detail-1 span h5 {
+        font-size: 22px;
+    }
+
+    .subscribe-button {
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+
+    .follow-button {
+        padding: 10px 10px;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .custom-div {
+        gap: 14px;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .bordr {
+        padding-right: 80px;
+        height: 45px;
+    }
+
+    .reach ul {
+        padding: 10px 0px;
+    }
+
+    .reach ul li h5 {
+        margin-bottom: 5px;
+        font-size: 22px;
+        line-height: 25px;
+
+    }
+
+    .download-app {
+        padding: 34px 34px;
+    }
+
+    .bio-sec {
+        padding: 34px 34px;
+    }
 
 
+}
+
+@media (min-width:2560px) {
+    .profile-main-content .image-div {
+        width: -webkit-fill-available;
+    }
+
+    .profile-main-content .image-div img {
+        width: 100%;
+
+    }
+
+    .profile-main-logo img {
+        width: 100%;
+    }
+}

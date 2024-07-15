@@ -56,13 +56,16 @@ class LiveStreamController extends Controller
     }
 
     public function stream_list(){
-        $user = new ParseQuery("_User");
-        $user->includeKey('*');
+        $users = new ParseQuery("_User");
+        $users->includeKey('*');
         try {
-            $users = $user->limit(12)->find();
+            $users = $users->limit(12)->find();
         } catch (ParseException $ex) {
             dd('catch',$users);
         }
+        $user = session()->get('user');
+        $userquery = new ParseQuery("_User");
+        $user = $userquery->get($user['id']);
 
         $query = new ParseQuery("Streaming");
         $query->includeKey('*');
@@ -72,6 +75,6 @@ class LiveStreamController extends Controller
             dd('catch',$results);
         }
 
-        return view('streamList',compact('results','users'));
+        return view('streamList',compact('results','users','user'));
     }
 }

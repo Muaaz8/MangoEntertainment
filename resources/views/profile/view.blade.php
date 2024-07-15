@@ -32,43 +32,37 @@
                                 <li><a href="#">Mango Ent Store</a></li>
                             </ul>
                         </div>
-                                  <!-- --------------- -->
-                                  <!-- <div class="mobile-container">
-
-
-                                    <div class="topnav">
-
-                                      <div id="myLinks">
-                                        <a href="#home" >Logo</a>
-                                        <a href="#news">News</a>
-                                        <a href="#contact">Contact</a>
-                                        <a href="#about">About</a>
-                                      </div>
-                                      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                        <i class="fas fa-bars"></i>
-                                      </a>
-                                    </div>
-                                    </div>
-
-                                   ---------------- -->
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                         <div class="profile-login-image">
-                            <a href="" onclick="toggleDiv()" ><img src="./img/profile-image.png" alt=""></a>
+                            @if($results->avatar)
+                                <a href="" onclick="toggleDiv()" ><img src="{{ $results->avatar->geturl() }}" alt=""></a>
+                            @else
+                                <a href="" onclick="toggleDiv()" ><img src="{{asset('img/user-icon.png')}}" alt=""></a>
+                            @endif
                         </div>
-                        <div class="profile-login-logout" id="myDiv" onload="myFunction()">
+                        <div class="profile-login-logout" id="myDiv" onload="myFunction()" style="display: none;">
                             <div class="pop-1">
                                 <a href=""><img src="./img/setting-img.png" alt=""></a>
-                                <a href=""><img class="make-pro" src="./img/img_20240317_203747 (1).png" alt=""></a>
+                                @if($results->avatar)
+                                    <a href=""><img class="make-pro" src="{{ $results->avatar->geturl() }}" alt=""></a>
+                                @else
+                                    <a href=""><img class="make-pro" src="{{ asset('img/user-icon.png') }}" alt=""></a>
+                                @endif
                             </div>
                             <div class="pop-2">
-                                <h5>🦊 LLOUISE DNLO 🦊</h5>
-                                <p>id: 01251421 <a href=""><img src="./img/tabler_copy.png" alt=""></a></p>
+                                <h5>{{ $results->username }}</h5>
+                                @if($results->uid)
+                                    <p>id: {{ $results->uid }} </p>
+                                @endif
                             </div>
                             <div class="pop-3">
                                 <ul>
-                                    <li><i class="fa-solid fa-user"></i><a href="">Profile</a></li>
-                                    <li><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="">Logout</a></li>
+                                    <li><i class="fa-solid fa-user"></i><a href="{{ url('/my-profile') }}">Profile</a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    <li><i class="fa-solid fa-arrow-right-from-bracket"></i><a id="logout-button">Logout</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -269,6 +263,9 @@
             event.preventDefault();
             myDiv.addEventListener('click', myDiv);
         }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            document.getElementById('logout-form').submit();
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>

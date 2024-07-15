@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div class="single-section">
-        <div class="single-header">
+    {{-- <div class="single-section"> --}}
+        {{-- <div class="single-header">
             <div class="container-fluid">
                 <div class="row align-item-center">
                     <div class="col-xl-3 col-md-3">
@@ -38,8 +38,6 @@
                         <nav class="-mx-3 flex flex-1 justify-end">
                             @if(Session::has('user'))
                                 <div class="single-login-button">
-                                    {{-- <button onclick="window.location.href='{{ url('/joinStream') }}'">Join Stream</button>
-                                    <button onclick="window.location.href='{{ url('/stream') }}'">Start Stream</button> --}}
                                     <button onclick="window.location.href='{{ url('/') }}'"> Dashboard </button>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -61,6 +59,63 @@
                             @endauth
                         </nav>
                     @endif
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+    <div class="profile-section">
+        <div class="profile-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-md-3 col-sm-3 pt-1">
+                        <div class="profile-main-logo">
+                            <a href="#"><img src="./img/Mango Entertainment-logo-blue.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
+                        <div class="profile-sec-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">PC Live</a></li>
+                                <li><a href="#">App</a></li>
+                                <li><a href="#">Recharge</a></li>
+                                <li><a href="#">Mango Ent Store</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                        <div class="profile-login-image">
+                            @if($user->avatar)
+                                <a href="" onclick="toggleDiv()" ><img src="{{ $user->avatar->geturl() }}" alt=""></a>
+                            @else
+                                <a href="" onclick="toggleDiv()" ><img src="{{asset('img/user-icon.png')}}" alt=""></a>
+                            @endif
+                        </div>
+                        <div class="profile-login-logout" id="myDiv" onload="myFunction()" style="display: none;">
+                            <div class="pop-1">
+                                <a href=""><img src="./img/setting-img.png" alt=""></a>
+                                @if($user->avatar)
+                                    <a href=""><img class="make-pro" src="{{ $user->avatar->geturl() }}" alt=""></a>
+                                @else
+                                    <a href=""><img class="make-pro" src="{{ asset('img/user-icon.png') }}" alt=""></a>
+                                @endif
+                            </div>
+                            <div class="pop-2">
+                                <h5>{{ $user->username }}</h5>
+                                @if($user->uid)
+                                    <p>id: {{ $user->uid }} </p>
+                                @endif
+                            </div>
+                            <div class="pop-3">
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i><a href="{{ url('/my-profile') }}">Profile</a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    <li><i class="fa-solid fa-arrow-right-from-bracket"></i><a id="logout-button">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -621,7 +676,7 @@
                                         <div class="col-12">
                                             <div class="swiper top-streams-Swiper">
                                                 <div class="swiper-wrapper">
-                                                    @foreach ($results as $result)
+                                                    @forelse ($results as $result)
                                                         <div class="swiper-slide" onclick="window.location.href='/joinStream/{{ $result->AuthorUid }}'">
                                                             <div class="main-cont">
                                                                 <div class="top-steams">
@@ -650,7 +705,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    @endforeach
+                                                    @empty
+                                                        <div class="col text-center">
+                                                            No Stream Currently Available.
+                                                        </div>
+                                                    @endforelse
                                                 </div>
                                             </div>
                                         </div>
@@ -2536,7 +2595,7 @@ function togglesocial(id) {
 
             var div = document.getElementById('myDiv');
             // Check the current display state
-            if (div.style.display === 'none') {
+            if (div.style.display == 'none') {
                 // If it's hidden, show it
                 div.style.display = 'block';
             } else {
