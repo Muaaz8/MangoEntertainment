@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LiveStreamController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GeneralController;
 use ZEGO\ZegoServerAssistant;
 use Parse\ParseQuery;
 
@@ -33,6 +34,16 @@ use Parse\ParseQuery;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/dashboard', [GeneralController::class, 'dashboard'])->name('dashboard');
+Route::get('/hashtags', [GeneralController::class, 'hashtags'])->name('hashtags');
+Route::get('/users', [GeneralController::class, 'users'])->name('users');
+Route::get('/gifts', [GeneralController::class, 'gifts'])->name('gifts');
+
+Route::post('insert/hashtags',[GeneralController::class, 'insert_hashtags'])->name('insert_hashtags');
+Route::delete('delete/hashtags/{id}',[GeneralController::class, 'delete_hashtag'])->name('delete_hashtag');
+Route::get('edit/hashtags/{id}',[GeneralController::class, 'edit_hashtag'])->name('edit_hashtag');
+Route::post('update/hashtags/{id}',[GeneralController::class, 'update_hashtag'])->name('update_hashtag');
 
 Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
 Route::get('/my-profile', [ProfileController::class,'my_profile']);

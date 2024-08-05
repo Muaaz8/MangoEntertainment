@@ -52,6 +52,7 @@ class AuthController extends Controller
             $userdata = [
                 'id' => $user->getObjectId(),
                 'name' => $user->get('name'),
+                'role' => $user->get('role'),
             ];
 
             session(['user' => $userdata]);

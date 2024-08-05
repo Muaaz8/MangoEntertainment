@@ -42,9 +42,11 @@
                             <nav class="-mx-3 flex flex-1 justify-end">
                                 @if(Session::has('user'))
                                     <div class="login-button">
+                                        @if(Session::get('user')['role'] == "admin")
+                                            <button onclick="window.location.href='{{ url('/dashboard') }}'"> Dashboard </button>
+                                        @endif
                                         {{-- <button onclick="window.location.href='{{ url('/joinStream') }}'">Join Stream</button>
                                         <button onclick="window.location.href='{{ url('/stream') }}'">Start Stream</button> --}}
-                                        <button onclick="window.location.href='{{ url('/') }}'"> Dashboard </button>
                                         {{-- <button>
                                             <form action="{{ route('logout') }}" method="POST">
                                                 @csrf
