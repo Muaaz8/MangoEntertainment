@@ -6,7 +6,7 @@
         <div class="gift-table mt-4">
             <div class="gift-top-nav">
                 <div class="g-tp-1">
-                    <div class="gp-b-1">
+                    {{-- <div class="gp-b-1">
                         <span>show</span>
                         <select aria-label="Default select example">
                             <!-- <option selected>Open this select menu</option> -->
@@ -15,7 +15,7 @@
                             <option value="3">50</option>
                         </select>
                         <span>Entries</span>
-                    </div>
+                    </div> --}}
                     <div class="gp-b-2">
                         <input type="search" placeholder="Search">
                         <img src="./img/new-search-icon.png" alt="">
@@ -38,159 +38,35 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($paginator as $gift)
                     <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
+                        <td>{{ $gift->getObjectId() }}</td>
+                        <td><img src="{{ $gift->image->geturl() }}" alt=""></td>
+                        <td>{{ $gift->name }}</td>
+                        <td><a class="all-gift-button" href="">{{ $gift->categories }}</a></td>
+                        <td><img src="./img/coin-icon.png" alt="">{{ $gift->coins }}</td>
+                        <td>{{$gift->created_at}}</td>
                         <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
+                            <form action="{{ route('delete_gift', $gift->getObjectId()) }}" method="POST"
+                                style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    onclick="return confirm('Are you sure you want to delete this Gift?')"
+                                    style="    background: none;
+                                                border: none;"><img src="./img/Lr-delete-icon.png"
+                                        alt=""></button>
+                            </form>
                         </td>
                     </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="new-button" href="">New</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="new-button" href="">New</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3245</td>
-                        <td><img src="./img/profile-image.png" alt=""></td>
-                        <td>25</td>
-                        <td><a class="all-gift-button" href="">All Gifts</a></td>
-                        <td><img src="./img/coin-icon.png" alt="">15</td>
-                        <td>
-                            <date>2024-09-28</date><time>03:58:04</time>
-                        </td>
-                        <td><a href="#"><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                href="#"><img src="./img/Lr-delete-icon.png"
-                                    alt=""></a>
-                        </td>
-                    </tr>
+                @endforeach
                 </tbody>
 
             </table>
 
             <nav class="all-navigation mt-3" aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link page-first" href="#">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link num" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link num" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link num m-0" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link page-last" href="#">Next</a>
-                    </li>
+                    {{ $paginator->links('pagination::bootstrap-4') }}
                 </ul>
             </nav>
 
@@ -201,46 +77,56 @@
         <div class="gift-box-1">
             <p>Add New gift</p><img src="./img/close-icon.png" alt="">
         </div>
-        <div class="gift-details">
-            <div class="fin">
-                <label for="name"><span class="color-red">*</span>Name</label>
-                <input type="text" placeholder="Give a name to a gift">
-            </div>
-            <div class="fse">
-                <label for="category"><span class="color-red">*</span>Category</label>
-                <select name="category">
-                    <option value="All Gifts">All Gifts</option>
-                    <option value="New">New</option>
-                    <option value="Store">Store</option>
-                </select>
-            </div>
-            <div class="fin">
-                <label for="lname"><span class="color-red">*</span>Coins</label>
-                <input type="text" placeholder="Coins Needed to send the gift">
-            </div>
-        </div>
-        <h6>Upload Files</h6>
-        <div class="gift-darg-drop">
-
-            <div class="gdd-upload-1">
-                <div class="gup-box-1">
-                    <img src="./img/png-uploader-icon.png" alt="">
-                    <span><img src="./img/cloud-icon.png" alt="">Upload PNG</span>
+        <form action="{{ url('insert/gifts') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="gift-details">
+                <div class="fin">
+                    <label for="name"><span class="color-red">*</span>Name</label>
+                    <input type="text" name="name" placeholder="Give a name to a gift">
                 </div>
-                <div class="gup-box-2">
-                    <img src="./img/svga-uploader-icon.png" alt="">
-                    <span><img src="./img/cloud-icon.png" alt="">Upload SVGA</span>
+                <div class="fse">
+                    <label for="category"><span class="color-red">*</span>Category</label>
+                    <select name="category">
+                        <option value="All Gifts">All Gifts</option>
+                        <option value="New">New</option>
+                        <option value="Store">Store</option>
+                    </select>
+                </div>
+                <div class="fin">
+                    <label for="lname"><span class="color-red">*</span>Coins</label>
+                    <input type="text" name="coins" placeholder="Coins Needed to send the gift">
                 </div>
             </div>
-            <div class="gdd-upload-2">
-                <img src="./img/music-icon-lr.png" alt="">
-                <p><img src="./img/cloud-icon.png" alt="">Upload Music</p>
+            <h6>Upload Files</h6>
+            <div class="gift-darg-drop">
+                <div class="gdd-upload-1">
+                    <div class="gup-box-1">
+                        <label style="display: contents;">
+                            <img src="./img/png-uploader-icon.png" alt="">
+                            <span>Upload PNG</span>
+                            <input type="file" accept=".png" name="image" style="display: none;">
+                        </label>
+                    </div>
+                    <div class="gup-box-2" >
+                        <label style="display: contents;">
+                            <img src="./img/svga-uploader-icon.png" alt="">
+                            <span>Upload SVGA</span>
+                            <input type="file" accept=".svga" name="file" style="display: none;">
+                        </label>
+                    </div>
+                </div>
+                <div class="gdd-upload-2">.
+                    <label>
+                        <img src="./img/music-icon-lr.png" alt="">
+                        <p><img src="./img/cloud-icon.png" alt="">Upload Music</p>
+                        <input type="file" accept=".mp3" name="music" style="display: none;">
+                    </label>
+                </div>
             </div>
-        </div>
-        <div class="add-cancel-button">
-            <a class="cancel-button" href="">Cancel</a>
-            <a class="add-button" href="">Add</a>
-        </div>
+            <div class="add-cancel-button">
+                <button class="add-button" type="submit">Add</a>
+            </div>
+        </form>
     </div>
 
 </div>

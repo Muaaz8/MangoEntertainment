@@ -5,14 +5,6 @@
         <section class="user-section mt-4">
             <div class="user-top-nav">
                 <div class="tp-b-1">
-                    <span>show</span>
-                    <select aria-label="Default select example">
-                        <!-- <option selected>Open this select menu</option> -->
-                        <option value="1">10</option>
-                        <option value="2">20</option>
-                        <option value="3">50</option>
-                    </select>
-                    <span>Entries</span>
                 </div>
                 <div class="tp-b-2">
                     <input type="search" placeholder="Search">
@@ -24,182 +16,56 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>Id</th>
                             <th>Profile</th>
-                            <th>name</th>
+                            <th>Name</th>
                             <th>Login</th>
                             <th>Device</th>
                             <th>Country</th>
                             <th>Coin</th>
-                            <th>Revenew</th>
+                            <th>Level</th>
                             <th>Gender</th>
                             <th>Verification</th>
-                            <th>Action</th>
+                            {{-- <th>Action</th> --}}
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0198735</td>
-                            <td><img src="./img/profile-image.png" alt=""></td>
-                            <td>Jaqline</td>
-                            <td><img src="./img/gogle-icon.png" alt="">Google</td>
-                            <td>Android</td>
-                            <td><img src="./img/jordan-icon.png" alt=""></td>
-                            <td><img src="./img/coin-icon.png" alt="">16</td>
-                            <td>$104</td>
-                            <td>Male</td>
-                            <td><a class="Verified-button" href="#">Verified</a></td>
-                            <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
-                                    href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
-                            </td>
-                        </tr>
+                        @foreach ($paginator as $user)
+                            <tr>
+                                <td>{{ $user->getObjectId() }}</td>
+                                <td><img src="./img/profile-image.png" alt=""></td>
+                                <td>{{ $user->name }}</td>
+                                <td>
+                                    @if($user->authData)
+                                        <img src="./img/gogle-icon.png" alt="">Google
+                                    @else
+                                        Platform
+                                    @endif
+                                </td>
+                                <td>{{ $user->device?$user->device:"Web" }}</td>
+                                <td>{{ $user->country }}</td>
+                                <td><img src="./img/coin-icon.png" alt="">{{ $user->coins }}</td>
+                                <td>{{ $user->level }}</td>
+                                <td>{{ $user->gender }}</td>
+                                <td>
+                                    @if ($user->emailVerified)
+                                        <a class="Verified-button" href="#">Verified</a>
+                                    @else
+                                        <a class="Verified-button" href="#">Unverified</a>
+                                    @endif
+                                </td>
+                                {{-- <td><a href=""><img src="./img/Lr-edit-icon.png" alt=""></a><a
+                                        href=""><img src="./img/Lr-delete-icon.png" alt=""></a>
+                                </td> --}}
+                            </tr>
+                        @endforeach
+
                     </tbody>
 
                 </table>
                 <nav class="all-navigation mt-3" aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link page-first" href="#">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link num" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link num" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link num m-0" href="#">3</a>
-                        </li>
-                        <li class="page-item"><a class="page-link page-last" href="#">Next</a></li>
+                        {{ $paginator->links('pagination::bootstrap-4') }}
                     </ul>
                 </nav>
 

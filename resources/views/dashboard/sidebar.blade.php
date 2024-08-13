@@ -12,10 +12,10 @@
                         src="./img/dashboard-icon.png" alt="">Dashboard</button>
                 <button class="nav-link" type="button" onclick="window.location.href='/hashtags'"><img
                         src="./img/hashtag-icon.png" alt="">Hastag</button>
-                <button class="nav-link shown-click" onclick="window.location.href='/hashtags'"><img src="./img/user-icon.png" alt="">User</button>
+                <button class="nav-link shown-click" onclick="window.location.href='/users'"><img src="./img/user-icon.png" alt="">User</button>
                     {{-- <button style="display: none;" class="nav-admin-button show-click ">Admin</button> --}}
 
-                <button class="nav-link" onclick="window.location.href='/#'"><img
+                <button class="nav-link" onclick="window.location.href='/music'"><img
                         src="./img/musical-note-icon.png" alt="">Music</button>
 
                 <button class="nav-link" onclick="window.location.href='/#'"><img
@@ -27,7 +27,7 @@
                 <button class="nav-link" onclick="window.location.href='/gifts'"><img
                         src="./img/gift-box-icon.png" alt="">Gifts</button>
 
-                <button class="nav-link" onclick="window.location.href='/#'"><img
+                <button class="nav-link" onclick="window.location.href='/store'"><img
                         src="./img/store-m-icon-.png" alt="">Store</button>
 
                 <button class="nav-link" onclick="window.location.href='/#'"><img

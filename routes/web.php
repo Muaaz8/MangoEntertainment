@@ -38,12 +38,18 @@ Route::get('/', function () {
 Route::get('/dashboard', [GeneralController::class, 'dashboard'])->name('dashboard');
 Route::get('/hashtags', [GeneralController::class, 'hashtags'])->name('hashtags');
 Route::get('/users', [GeneralController::class, 'users'])->name('users');
+Route::get('/music', [GeneralController::class, 'music'])->name('music');
 Route::get('/gifts', [GeneralController::class, 'gifts'])->name('gifts');
+Route::get('/store', [GeneralController::class, 'dash_store'])->name('store');
 
 Route::post('insert/hashtags',[GeneralController::class, 'insert_hashtags'])->name('insert_hashtags');
+Route::post('insert/gifts',[GeneralController::class, 'insert_gifts'])->name('insert_gifts');
+Route::post('insert/music',[GeneralController::class, 'insert_music'])->name('insert_music');
 Route::delete('delete/hashtags/{id}',[GeneralController::class, 'delete_hashtag'])->name('delete_hashtag');
+Route::delete('delete/gift/{id}',[GeneralController::class, 'delete_gift'])->name('delete_gift');
+Route::delete('delete/music/{id}',[GeneralController::class, 'delete_music'])->name('delete_music');
 Route::get('edit/hashtags/{id}',[GeneralController::class, 'edit_hashtag'])->name('edit_hashtag');
-Route::post('update/hashtags/{id}',[GeneralController::class, 'update_hashtag'])->name('update_hashtag');
+Route::post('update/hashtags',[GeneralController::class, 'update_hashtag'])->name('update_hashtag');
 
 Route::get('/stream-list', [LiveStreamController::class,'stream_list']);
 Route::get('/my-profile', [ProfileController::class,'my_profile']);

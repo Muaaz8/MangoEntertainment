@@ -69,13 +69,13 @@
                 <div class="row align-items-center">
                     <div class="col-xl-3 col-md-3 col-sm-3 pt-1">
                         <div class="profile-main-logo">
-                            <a href="#"><img src="./img/Mango Entertainment-logo-blue.png" alt=""></a>
+                            <a href="/"><img src="./img/Mango Entertainment-logo-blue.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
                         <div class="profile-sec-nav">
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="#">PC Live</a></li>
                                 <li><a href="#">App</a></li>
                                 <li><a href="#">Recharge</a></li>

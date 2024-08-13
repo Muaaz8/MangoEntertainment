@@ -64,17 +64,20 @@ class LiveStreamController extends Controller
             dd('catch',$users);
         }
         $user = session()->get('user');
-        $userquery = new ParseQuery("_User");
-        $user = $userquery->get($user['id']);
+        if($user){
+            $userquery = new ParseQuery("_User");
+            $user = $userquery->get($user['id']);
 
-        $query = new ParseQuery("Streaming");
-        $query->includeKey('*');
-        try {
-            $results = $query->equalTo("streaming",true)->find();
-        } catch (ParseException $ex) {
-            dd('catch',$results);
+            $query = new ParseQuery("Streaming");
+            $query->includeKey('*');
+            try {
+                $results = $query->equalTo("streaming",true)->find();
+            } catch (ParseException $ex) {
+                dd('catch',$results);
+            }
+            return view('streamList',compact('results','users','user'));
+        }else{
+            return redirect()->route('signin');
         }
-
-        return view('streamList',compact('results','users','user'));
     }
 }
